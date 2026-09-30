@@ -1,0 +1,235 @@
+/* --- ESTILOS GENERALES Y RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f4f7fa;
+            color: #2d3748;
+            line-height: 1.8;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            padding: 50px 60px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+        }
+
+        /* --- ENCABEZADO --- */
+        header {
+            text-align: center;
+            margin-bottom: 45px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: #0f172a;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            text-transform: capitalize;
+            margin-bottom: 25px;
+        }
+
+        /* --- MENÚ DE NAVEGACIÓN --- */
+        .main-nav {
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 12px 0;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: #64748b;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #1e3a8a;
+            transition: width 0.3s ease;
+        }
+
+        .main-nav a:hover {
+            color: #1e3a8a;
+        }
+
+        .main-nav a:hover::after {
+            width: 100%;
+        }
+
+        .main-nav a.active {
+            color: #1e3a8a;
+        }
+
+        .main-nav a.active::after {
+            width: 100%;
+        }
+
+        /* --- SECCIONES Y CONTENEDORES --- */
+        .grid-sections {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 30px;
+            margin-bottom: 45px;
+        }
+
+        .card {
+            background: #fafbfc;
+            border: 1px solid #e2e8f0;
+            padding: 30px;
+            border-radius: 16px;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+            border-color: #cbd5e1;
+        }
+
+        h2 {
+            font-size: 1.5rem;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        /* --- ELEMENTOS DE FORMULARIO --- */
+        .contact-form {
+            display: flex;
+            flex-direction: column;
+            gap: 18px;
+        }
+
+        .form-group {
+            display: flex;
+            flex-direction: column;
+            gap: 6px;
+        }
+
+        .form-group label {
+            font-size: 0.85rem;
+            font-weight: 600;
+            color: #475569;
+            text-align: left;
+        }
+
+        .form-group input,
+        .form-group textarea {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            width: 100%;
+            padding: 12px 16px;
+            border: 1px solid #cbd5e1;
+            border-radius: 10px;
+            background-color: #ffffff;
+            color: #0f172a;
+            font-size: 0.95rem;
+            outline: none;
+            transition: border-color 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .form-group input:focus,
+        .form-group textarea:focus {
+            border-color: #1e3a8a;
+            box-shadow: 0 0 0 3px rgba(30, 58, 138, 0.1);
+        }
+
+        .form-group textarea {
+            resize: vertical;
+            min-height: 120px;
+        }
+
+        .btn-submit {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #1e3a8a;
+            color: #ffffff;
+            font-size: 1rem;
+            font-weight: 600;
+            border: none;
+            padding: 14px;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            margin-top: 5px;
+        }
+
+        .btn-submit:hover {
+            background-color: #1e40af;
+            transform: translateY(-1px);
+        }
+
+        /* --- DETALLES DE INFORMACIÓN --- */
+        .info-intro {
+            font-size: 0.95rem;
+            color: #64748b;
+            margin-bottom: 25px;
+        }
+
+        .info-block {
+            margin-bottom: 25px;
+            text-align: left;
+        }
+
+        .info-block h3 {
+            font-size: 1.1rem;
+            color: #0f172a;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .info-block p {
+            font-size: 0.95rem;
+            color: #475569;
+            line-height: 1.6;
+        }
+
+        .info-block.ecosystem {
+            background-color: #f0fdfa;
+            border: 1px dashed #2dd4bf;
+            padding: 15px;
+            border-radius: 12px;
+            margin-top: auto;
+        }
+
+        .info-block.ecosystem p {
+            color: #0f766e;
+            font-size: 0.9rem;
+        }
+
+        /* --- RESPONSIVE --- */
+        @media (max-width: 768px) {
+            body { padding: 20px 10px; }
+            .container { padding: 30px 20px; }
+            .main-nav ul { gap: 15px; flex-wrap: wrap; }
+            .grid-sections { grid-template-columns: 1fr; gap: 20px; }
+            header h1 { font-size: 2.2rem; }
+        }

@@ -1,0 +1,30 @@
+/*css hoja formato hoja en general */   
+.contenedor   
+{   
+position:relative; width:600px; 
+left:50%; margin-left:-300px;   
+}   
+#cabeza   
+{   
+width:600px; height:150px;  background-color:red;   
+}   
+   
+#cuerpo   
+{   
+width:600px; height:500px; background-color:#00cc99;   
+}   
+#pie   
+{  
+width:600px; height:30px; background-color:green;   
+}   
+#menu   
+{   
+width:600px; height:50px;  background-color:green;   
+}  li   
+{ float:left; list-style:none; margin-left:50px;   
+}   
+   
+#menu div   
+{   
+padding-top:1px;   
+}

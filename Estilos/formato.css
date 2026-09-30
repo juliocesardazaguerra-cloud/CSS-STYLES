@@ -1,0 +1,32 @@
+/*DISEÑO DEL FORMATO DEL DOCUMETO*/
+h1  
+{   
+font-size:24px; font-family:tahoma; 
+color:red;   
+padding-top:20px;   
+   
+}   
+   
+h2{   
+font-size:16px; font-family:arial; 
+color:blue;  margin-left:10px;   
+}
+
+p{   
+font-size:12px; font-family:arial;  color:#ffffff; 
+margin-left:20px;   width:400px;   float:left;  text-align:justify;   
+ }   
+img   
+{   
+width:150px; height:100px; 
+float:right; margin-right:20px;   
+}  
+.m1{   
+width:600px; height:150px; 
+float:left; margin-left:3;   
+top:-5px;     
+}   
+
+.s2{   
+margin-top:150px;   
+}   

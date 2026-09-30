@@ -1,0 +1,10 @@
+/* css diseño imagen cabeza */   
+   
+img   
+{   
+width:150px;  height:100px; float:right; margin-right:20px;   
+}   
+.m2   
+ {   
+width:600px;  height:150px; float:left; margin-left:3; top:-5px;   
+}

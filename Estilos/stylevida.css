@@ -1,0 +1,177 @@
+/* --- ESTILOS GENERALES Y RESET --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Plus Jakarta Sans', sans-serif;
+    background-color: #f4f7fa;
+    color: #2d3748;
+    line-height: 1.8;
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+/* --- CONTENEDOR PRINCIPAL --- */
+.container {
+    max-width: 900px;
+    width: 100%;
+    background: #ffffff;
+    padding: 50px 60px;
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+/* --- ENCABEZADO --- */
+header {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+header h1 {
+    font-size: 2.8rem;
+    color: #0f172a;
+    font-weight: 700;
+    letter-spacing: -0.5px;
+    text-transform: capitalize;
+    margin-bottom: 25px;
+}
+
+/* --- MENÚ DE NAVEGACIÓN (NUEVO) --- */
+.main-nav {
+    border-top: 1px solid #e2e8f0;
+    border-bottom: 1px solid #e2e8f0;
+    padding: 12px 0;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 35px;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: #64748b;
+    font-size: 0.9rem;
+    font-weight: 600;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+    position: relative;
+    padding: 4px 0;
+}
+
+/* Efecto hover elegante con línea inferior */
+.main-nav a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #1e3a8a;
+    transition: width 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #1e3a8a;
+}
+
+.main-nav a:hover::after {
+    width: 100%;
+}
+
+/* Estado activo para identificar la página actual */
+.main-nav a.active {
+    color: #1e3a8a;
+}
+
+.main-nav a.active::after {
+    width: 100%;
+}
+
+/* --- SECCIONES (MISIÓN Y VISIÓN) --- */
+.grid-sections {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+    margin-bottom: 45px;
+}
+
+.card {
+    background: #fafbfc;
+    border: 1px solid #e2e8f0;
+    padding: 30px;
+    border-radius: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(15, 23, 42, 0.04);
+    border-color: #cbd5e1;
+}
+
+h2 {
+    font-size: 1.5rem;
+    color: #1e3a8a;
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+
+/* --- METODOLOGÍA --- */
+.methodology-section {
+    background: #f8fafc;
+    border-left: 5px solid #06b6d4;
+    padding: 35px;
+    border-radius: 0 16px 16px 0;
+}
+
+.methodology-section h2 {
+    color: #0f172a;
+}
+
+.methodology-section p {
+    margin-bottom: 15px;
+    text-align: justify;
+    font-size: 1.05rem;
+}
+
+.methodology-section p:last-child {
+    margin-bottom: 0;
+}
+
+/* --- RESPONSIVE (MÓVILES) --- */
+@media (max-width: 768px) {
+    body {
+        padding: 20px 10px;
+    }
+
+    .container {
+        padding: 30px 20px;
+    }
+
+    .main-nav ul {
+        gap: 15px;
+        flex-wrap: wrap;
+    }
+
+    .main-nav a {
+        font-size: 0.8rem;
+    }
+
+    .grid-sections {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    header h1 {
+        font-size: 2.2rem;
+    }
+}

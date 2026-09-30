@@ -1,0 +1,213 @@
+/* --- ESTILOS GENERALES Y RESET --- */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            background-color: #f4f7fa;
+            color: #2d3748;
+            line-height: 1.8;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        /* --- CONTENEDOR PRINCIPAL --- */
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: #ffffff;
+            padding: 0 0 40px 0;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+            overflow: hidden;
+        }
+
+        /* --- BANNER SUPERIOR CON IMAGEN ONLINE --- */
+        .hero-banner {
+            width: 100%;
+            height: 250px;
+            background-image: url('/Fotos/horizon.jpg'); 
+            background-size: cover;
+            background-position: center;
+            position: relative;
+        }
+
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(15, 23, 42, 0.3);
+        }
+
+        /* --- ENCABEZADO Y MENÚ --- */
+        header {
+            text-align: center;
+            padding: 30px 60px 10px 60px;
+        }
+
+        header h1 {
+            font-size: 2.8rem;
+            color: #0f172a;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+            text-transform: uppercase; /* El título H1 en mayúsculas rigurosas */
+            margin-bottom: 25px;
+        }
+
+        .main-nav {
+            border-top: 1px solid #e2e8f0;
+            border-bottom: 1px solid #e2e8f0;
+            padding: 12px 0;
+            margin-bottom: 35px;
+        }
+
+        .main-nav ul {
+            list-style: none;
+            display: flex;
+            justify-content: center;
+            gap: 35px;
+        }
+
+        .main-nav a {
+            text-decoration: none;
+            color: #64748b;
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+            transition: color 0.3s ease;
+            position: relative;
+            padding: 4px 0;
+        }
+
+        .main-nav a::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background-color: #1e3a8a;
+            transition: width 0.3s ease;
+        }
+
+        .main-nav a:hover, .main-nav a.active {
+            color: #1e3a8a;
+        }
+
+        .main-nav a:hover::after, .main-nav a.active::after {
+            width: 100%;
+        }
+
+        /* --- CONTENIDO PRINCIPAL --- */
+        .content-wrap {
+            padding: 0 60px;
+        }
+
+        /* Sección Descriptiva del Ecosistema */
+        .ecosystem-card {
+            background: #fafbfc;
+            border: 1px solid #e2e8f0;
+            padding: 35px;
+            border-radius: 16px;
+            margin-bottom: 30px;
+        }
+
+        .ecosystem-card h2 {
+            font-size: 1.5rem;
+            color: #1e3a8a;
+            margin-bottom: 15px;
+            font-weight: 600;
+        }
+
+        .ecosystem-card p {
+            font-size: 1.05rem;
+            color: #334155;
+            text-align: justify;
+            margin-bottom: 15px;
+        }
+
+        .ecosystem-card p:last-child {
+            margin-bottom: 0;
+        }
+
+        /* --- ESPACIO DESTACADO PARA EL MOCKUP --- */
+        .mockup-section {
+            background: #f0fdfa; /* Fondo aguamarina suave */
+            border-left: 5px solid #06b6d4; /* Línea de realce */
+            padding: 30px;
+            border-radius: 0 16px 16px 0;
+            margin-bottom: 40px;
+            text-align: left;
+        }
+
+        .mockup-section h3 {
+            font-size: 1.2rem;
+            color: #0f172a;
+            margin-bottom: 8px;
+            font-weight: 600;
+        }
+
+        .mockup-section p {
+            font-size: 0.95rem;
+            color: #334155;
+            margin-bottom: 15px;
+        }
+
+        /* Botón de Enlace Estilizado */
+        .btn-mockup {
+            display: inline-block;
+            text-decoration: none;
+            background-color: #06b6d4;
+            color: #ffffff;
+            font-size: 0.9rem;
+            font-weight: 600;
+            padding: 10px 20px;
+            border-radius: 8px;
+            transition: background-color 0.3s ease, transform 0.2s ease;
+            box-shadow: 0 4px 12px rgba(6, 182, 212, 0.2);
+        }
+
+        .btn-mockup:hover {
+            background-color: #0891b2;
+            transform: translateY(-1px);
+        }
+
+        .btn-mockup:active {
+            transform: translateY(1px);
+        }
+
+        /* --- FOOTER / FIRMA --- */
+        footer {
+            text-align: center;
+            padding-top: 20px;
+            border-top: 1px solid #e2e8f0;
+            margin: 0 60px;
+        }
+
+        footer p {
+            font-size: 0.95rem;
+            color: #64748b;
+            font-weight: 500;
+            font-style: italic;
+        }
+
+        /* --- RESPONSIVE (MÓVILES) --- */
+        @media (max-width: 768px) {
+            body { padding: 20px 10px; }
+            .container { padding-bottom: 25px; }
+            header { padding: 20px 20px 5px 20px; }
+            .content-wrap { padding: 0 20px; }
+            footer { margin: 0 20px; }
+            header h1 { font-size: 2.2rem; }
+            .main-nav ul { gap: 15px; flex-wrap: wrap; }
+            .ecosystem-card { padding: 25px; }
+            .mockup-section { padding: 20px; }
+        }
